@@ -1,0 +1,16 @@
+<section id="ac-box">
+    <ul id="ac-list">
+        @for (country of countries; track country.id) {
+            <li class="country-card">
+                <h2 id="country-name">{{ country.name }}</h2>
+                <br>
+                <p><strong>Capital:</strong> {{ country.capitalCity }}</p>
+                <p><strong>Region:</strong> {{ country.region.value}}</p>
+                <p><strong>Income Level:</strong> {{ country.incomeLevel.value }}</p>
+                <p>Additional values:</p>
+                <p><strong>ID:</strong> {{country.id}}</p>
+                <p><strong>Iso Code:</strong> {{country.iso2Code}}</p>
+            </li>
+        }
+    </ul>
+</section>

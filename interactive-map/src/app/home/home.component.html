@@ -1,0 +1,22 @@
+<div id="home-container">
+    <div id="map-box">
+        <object id="svgMap" type="image/svg+xml" data="/map-image.svg" class="map-object"></object>
+    </div>
+    <div id="info-column">
+        <!-- Stuff -->
+        <h1>Current Country:</h1>
+        @if (selectedCountry) {
+            <h2 id="country-name">{{ selectedCountry.name }}</h2>
+            <br>
+            <p><strong>Capital:</strong> {{ selectedCountry.capitalCity }}</p>
+            <p><strong>Region:</strong> {{ selectedCountry.region.value}}</p>
+            <p><strong>Income Level:</strong> {{ selectedCountry.incomeLevel.value }}</p>
+            <p>Additional values:</p>
+            <p><strong>ID:</strong> {{selectedCountry.id}}</p>
+            <p><strong>Iso Code:</strong> {{selectedCountry.iso2Code}}</p>
+        }
+        @else {
+            <p>Please select a country to see more information.</p>
+        }
+    </div>
+</div>
