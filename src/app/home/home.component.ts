@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
     this.worldBankService.getCountryData(countryCode).subscribe(
       (countryData) => {
         this.selectedCountry = countryData[1][0]
-        console.log("HIHI, ", this.selectedCountry)
         this.cdr.detectChanges();
       }
     )
